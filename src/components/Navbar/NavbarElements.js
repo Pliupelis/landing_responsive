@@ -3,6 +3,7 @@ import { NavLink as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
+  /* background: transparent; ?? trigger on scroll to #000 ??*/
   background: #000;
   height: 80px;
   margin-top: -80px;

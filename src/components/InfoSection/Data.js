@@ -55,21 +55,21 @@ export const homeObjThree = {
   darkText: false,
 };
 
-export const homeObjFour = {
-  id: "discover",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: "Unlimited Access",
-  headline: "Unlimited Transaction with zero fees",
-  description:
-    "Get access to our exclusive app that allows you to send unlimited transactions without getting charged any.",
-  buttonLabel: "Learn More",
-  imgStart: true,
-  img: require("../../images/benefits.svg").default,
-  alt: "Wallet",
-  dark: false,
-  dark2: true,
-  primary: false,
-  darkText: true,
-};
+// export const homeObjFour = {
+//   id: "discover",
+//   lightBg: true,
+//   lightText: false,
+//   lightTextDesc: false,
+//   topLine: "Unlimited Access",
+//   headline: "Unlimited Transaction with zero fees",
+//   description:
+//     "Get access to our exclusive app that allows you to send unlimited transactions without getting charged any.",
+//   buttonLabel: "Learn More",
+//   imgStart: true,
+//   img: require("../../images/benefits.svg").default,
+//   alt: "Wallet",
+//   dark: false,
+//   dark2: true,
+//   primary: false,
+//   darkText: true,
+// };
