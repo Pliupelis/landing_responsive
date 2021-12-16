@@ -1,12 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignInPage from "./components/pages/signIn";
 import Home from "./components/pages";
-import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Home />
-      </BrowserRouter>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/signin" element={<SignInPage />} exact />
+        </Routes>
+      </Router>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -12,34 +12,50 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 
-const navbar = ({ toggle }) => {
+const Navbar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
   return (
-    <Nav>
-      <NavbarContainer>
-        <NavLogo to="/">euro</NavLogo>
-        <MobileIcon onClick={toggle}>
-          <FaBars />
-        </MobileIcon>
-        <NavMenu>
-          <NavItem>
-            <NavLinks to="about">About</NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="discover">discover</NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="services">services</NavLinks>
-          </NavItem>
-          <NavItem>
-            <NavLinks to="signup">signup</NavLinks>
-          </NavItem>
-        </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/signin">Sign in</NavBtnLink>
-        </NavBtn>
-      </NavbarContainer>
-    </Nav>
+    <>
+      <Nav scrollNav={scrollNav}>
+        <NavbarContainer>
+          <NavLogo to="/">euro</NavLogo>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLinks to="about">About</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="discover">discover</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="services">services</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks to="signup">signup</NavLinks>
+            </NavItem>
+          </NavMenu>
+          <NavBtn>
+            <NavBtnLink to="/signin">Sign in</NavBtnLink>
+          </NavBtn>
+        </NavbarContainer>
+      </Nav>
+    </>
   );
 };
 
-export default navbar;
+export default Navbar;
