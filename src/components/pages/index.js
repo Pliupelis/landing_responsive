@@ -28,7 +28,6 @@ const Home = () => {
       <Services />
       <InfoSection {...homeObjThree} />
       <Footer />
-      {/* <InfoSection {...homeObjFour} /> */}
     </>
   );
 };

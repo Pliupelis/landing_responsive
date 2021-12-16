@@ -79,7 +79,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
   color: white;
   font-size: 1rem;
-  &:active {
+  &.active {
     border-bottom: 3px solid rgb(0, 255, 76);
   }
 `;
